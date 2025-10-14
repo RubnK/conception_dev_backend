@@ -20,6 +20,16 @@ app.get('/transaction', (req, res) => {
   res.json(transactions);
 });
 
+app.get('/exo-query-string', (req, res) => {
+  console.log(req.query);
+  const { age } = req.query;
+  if (age) {
+    res.send(`<h1>Age: ${age}</h1>`);
+  } else {
+    res.send('hello');
+  }
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
