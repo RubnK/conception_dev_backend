@@ -15,6 +15,11 @@ app.get('/some-json', (req, res) => {
   res.json(personne);
 });
 
+app.get('/transaction', (req, res) => {
+  const transactions = [100, 2000, 3000];
+  res.json(transactions);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
